@@ -1,54 +1,78 @@
 # token-list
 
-Single source of truth for supported chains and tokens. The consolidated **tokenlist.json** is generated from per-chain JSON files and can be consumed via the GitHub raw URL once the repo is public.
+Single source of truth for supported chains and tokens. The consolidated **tokenlist.json** is generated from per-chain JSON files under `tokens/`.
 
-## Flow
+---
 
-1. **Add or edit tokens**  
-   - Add tokens to existing files under `tokens/` (e.g. `tokens/ethereum.json`).  
-   - Or add a new chain by creating `tokens/<chain>.json` with an array of tokens (each token must include `chainId`).
+## Adding a new token
 
-2. **Build the consolidated list**  
-   ```bash
-   pnpm install
-   pnpm run build:tokenlist
-   ```  
-   This writes **tokenlist.json** at the repo root.
+1. Open the JSON file for the chain under `tokens/` (e.g. `tokens/ethereum.json`).
+2. Add a token object to the array. Each token must have:
 
-3. **Use the list**  
-   Commit and push `tokenlist.json`. Anyone can use it via the raw GitHub URL, e.g.:  
-   `https://raw.githubusercontent.com/<owner>/<repo>/main/tokenlist.json`
+   | Field      | Type           | Required | Description                          |
+   | ---------- | -------------- | -------- | ------------------------------------ |
+   | `name`     | string         | yes      | Human-readable name                  |
+   | `address`  | string \| null | yes      | Contract address (null for native)   |
+   | `ticker`   | string         | yes      | Ticker (e.g. USDC, WETH)             |
+   | `decimals` | number         | yes      | Token decimals                       |
+   | `chainId`  | number         | yes      | Chain ID for this token              |
+   | `logoURI`  | string         | no       | Logo URL                             |
 
-## Token shape
+   Example:
 
-Each token in a chain JSON file must have:
+   ```json
+   {
+     "name": "USD Coin",
+     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+     "ticker": "USDC",
+     "decimals": 6,
+     "chainId": 1,
+     "logoURI": "https://..."
+   }
+   ```
 
-| Field      | Type           | Required | Description                          |
-| ---------- | -------------- | -------- | ------------------------------------ |
-| `name`     | string         | yes      | Human-readable name                  |
-| `address`  | string \| null | yes      | Contract address (null for native)   |
-| `ticker`   | string         | yes      | Ticker (e.g. USDC, WETH)             |
-| `decimals` | number         | yes      | Token decimals                       |
-| `chainId`  | number         | yes      | Chain ID for this token              |
-| `logoURI`  | string         | no       | Logo URL                             |
+3. Run `pnpm run build:tokenlist` to regenerate **tokenlist.json**.
 
-Example:
+---
 
-```json
-{
-  "name": "USD Coin",
-  "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-  "ticker": "USDC",
-  "decimals": 6,
-  "chainId": 1,
-  "logoURI": "https://..."
-}
-```
+## Adding a new chain and its tokens
 
-## Adding a new chain
+1. **Add the chain to chains.json**  
+   At the repo root, add an entry with `chainId`, `name`, and `logoURI`:
 
-1. Create `tokens/<chain>.json` (e.g. `tokens/polygon.json`).
-2. Put a JSON **array** of token objects; each must include `chainId` (e.g. `137` for Polygon).
-3. Run `pnpm run build:tokenlist`. The new chain is included automatically.
+   ```json
+   { "chainId": 137, "name": "Polygon", "logoURI": "https://..." }
+   ```
 
-No other config or code changes are required.
+2. **Create the token list for that chain**  
+   Create `tokens/<chain>.json` (e.g. `tokens/polygon.json`) with a JSON **array** of token objects. Each token must include the same fields as above, with `chainId` matching the new chain (e.g. `137` for Polygon).
+
+3. **Build**  
+   Run `pnpm run build:tokenlist`. The new chain and its tokens appear in **tokenlist.json**.
+
+If a chain has tokens but no entry in **chains.json**, the build falls back to the native token’s name/logo (or `"Chain <chainId>"`).
+
+---
+
+## Structure of the consolidated file (`tokenlist.json`)
+
+The build outputs a single JSON file with:
+
+| Field       | Type   | Description |
+| ----------- | ------ | ----------- |
+| `name`      | string | Token list name |
+| `version`   | object | `{ major, minor, patch }` |
+| `timestamp` | string | ISO build time |
+| `chains`    | array  | Supported chains and their metadata, each with nested `tokens` |
+
+**Each item in `chains`:**
+
+| Field            | Type   | Description |
+| ---------------- | ------ | ----------- |
+| `chainId`        | number | Chain ID |
+| `name`           | string | Chain display name (from **chains.json**) |
+| `logoURI`        | string \| null | Chain logo (from **chains.json**) |
+| `nativeCurrency` | object \| null | `{ symbol, decimals }` (from native token) |
+| `tokens`         | array  | Tokens for this chain only |
+
+Token objects inside `chains[].tokens` use the same shape as in the per-chain source files (`name`, `address`, `ticker`, `decimals`, `chainId`, optional `logoURI`).
