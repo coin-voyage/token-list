@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Ethereum",
+    "address": "0x0000000000000000000000000000000000000000",
+    "ticker": "ETH",
+    "decimals": 18,
+    "chainId": 1,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png"
+  },
+  {
+    "name": "Tether USD",
+    "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "ticker": "USDT",
+    "decimals": 6,
+    "chainId": 1,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+  },
+  {
+    "name": "USDCoin",
+    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "ticker": "USDC",
+    "decimals": 6,
+    "chainId": 1,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+  },
+  {
+    "chainId": 1,
+    "address": "0xaaeE1A9723aaDB7afA2810263653A34bA2C21C7a",
+    "name": "Mog Coin",
+    "ticker": "MOG",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/31059/large/MOG_LOGO_200x200.png"
+  }
+]

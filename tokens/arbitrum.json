@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Ethereum",
+    "address": null,
+    "ticker": "ETH",
+    "decimals": 18,
+    "chainId": 42161,
+    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"
+  },
+  {
+    "name": "USD Coin",
+    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+    "ticker": "USDC",
+    "decimals": 6,
+    "chainId": 42161,
+    "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694"
+  }
+]

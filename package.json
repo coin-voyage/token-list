@@ -1,0 +1,13 @@
+{
+  "name": "@coinvoyage/token-list",
+  "version": "1.0.0",
+  "description": "Single source of truth for supported chains and tokens; tokenlist.json is consumable via GitHub raw URL",
+  "packageManager": "pnpm@9.15.0",
+  "type": "module",
+  "tokenListName": "Coinvoyage Token List",
+  "scripts": {
+    "build:tokenlist": "node scripts/build-tokenlist.mjs"
+  },
+  "keywords": ["tokens", "chains", "token-list"],
+  "license": "MIT"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Solana",
+    "address": "So11111111111111111111111111111111111111112",
+    "ticker": "SOL",
+    "decimals": 9,
+    "chainId": 30000000000001,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989"
+  },
+  {
+    "name": "USD Coin",
+    "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "ticker": "USDC",
+    "decimals": 6,
+    "chainId": 30000000000001,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png?1696506694"
+  },
+  {
+    "name": "Trump Coin",
+    "address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+    "ticker": "TRUMP",
+    "decimals": 6,
+    "chainId": 30000000000001,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53746/large/trump.png?1737171561"
+  }
+]

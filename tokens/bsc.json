@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Binance Coin",
+        "ticker": "BNB",
+        "decimals": 18,
+        "chainId": 56,
+        "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970",
+        "address": null
+    },
+    {
+        "name": "Binance Bridged USDT",
+        "ticker": "BSC-USD",
+        "decimals": 6,
+        "chainId": 56,
+        "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png?1696501661",
+        "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+]
