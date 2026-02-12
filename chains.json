@@ -1,10 +1,10 @@
 [
   { "chainId": 1, "name": "Ethereum", "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png" },
+  { "chainId": 30000000000001, "name": "Solana", "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989" },
+  { "chainId": 30000000000002, "name": "Sui", "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png?1727791290" },
+  { "chainId": 20000000000001, "name": "Bitcoin", "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400" },
+  { "chainId": 8453, "name": "Base", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" },
   { "chainId": 10, "name": "Optimism", "logoURI": "https://assets.coingecko.com/coins/images/25244/standard/Optimism.png?1696524385" },
   { "chainId": 56, "name": "BNB Smart Chain", "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970" },
-  { "chainId": 8453, "name": "Base", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" },
-  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" },
-  { "chainId": 20000000000001, "name": "Bitcoin", "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400" },
-  { "chainId": 30000000000001, "name": "Solana", "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989" },
-  { "chainId": 30000000000002, "name": "Sui", "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png?1727791290" }
+  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" }
 ]
