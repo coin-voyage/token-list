@@ -4,8 +4,7 @@
     "ticker": "BTC",
     "decimals": 8,
     "chainId": 20000000000001,
-    "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400",
-    "address": null
+    "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400"
   }
 ]
   

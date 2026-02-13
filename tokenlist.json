@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-02-12T15:27:36.823Z",
+  "timestamp": "2026-02-13T05:31:56.822Z",
   "chains": [
     {
       "chainId": 1,
@@ -18,7 +18,6 @@
       "tokens": [
         {
           "name": "Ethereum",
-          "address": "0x0000000000000000000000000000000000000000",
           "ticker": "ETH",
           "decimals": 18,
           "chainId": 1,
@@ -54,11 +53,13 @@
       "chainId": 30000000000001,
       "name": "Solana",
       "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
-      "nativeCurrency": null,
+      "nativeCurrency": {
+        "symbol": "SOL",
+        "decimals": 9
+      },
       "tokens": [
         {
           "name": "Solana",
-          "address": "So11111111111111111111111111111111111111112",
           "ticker": "SOL",
           "decimals": 9,
           "chainId": 30000000000001,
@@ -86,11 +87,13 @@
       "chainId": 30000000000002,
       "name": "Sui",
       "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png?1727791290",
-      "nativeCurrency": null,
+      "nativeCurrency": {
+        "symbol": "SUI",
+        "decimals": 9
+      },
       "tokens": [
         {
           "name": "Sui",
-          "address": "0x2::sui::SUI",
           "ticker": "SUI",
           "decimals": 9,
           "chainId": 30000000000002,
@@ -120,8 +123,7 @@
           "ticker": "BTC",
           "decimals": 8,
           "chainId": 20000000000001,
-          "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400",
-          "address": null
+          "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400"
         }
       ]
     },
@@ -136,7 +138,6 @@
       "tokens": [
         {
           "name": "Ethereum",
-          "address": null,
           "ticker": "ETH",
           "decimals": 18,
           "chainId": 8453,
@@ -163,7 +164,6 @@
       "tokens": [
         {
           "name": "Ethereum",
-          "address": null,
           "ticker": "ETH",
           "decimals": 18,
           "chainId": 10,
@@ -193,8 +193,7 @@
           "ticker": "BNB",
           "decimals": 18,
           "chainId": 56,
-          "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970",
-          "address": null
+          "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970"
         },
         {
           "name": "Binance Bridged USDT",
@@ -217,7 +216,6 @@
       "tokens": [
         {
           "name": "Ethereum",
-          "address": null,
           "ticker": "ETH",
           "decimals": 18,
           "chainId": 42161,

@@ -54,8 +54,8 @@ const MAX_DECIMALS = 255;
 
 function isValidToken(t) {
   if (!t || typeof t !== "object") return false;
-  const validAddress = typeof t.address === "string" || t.address === null;
-  const nonEmptyAddress = t.address === null || (typeof t.address === "string" && t.address.length > 0);
+  const validAddress = typeof t.address === "string" || t.address === undefined;
+  const nonEmptyAddress = t.address === undefined || (typeof t.address === "string" && t.address.length > 0);
   const decimalsOk =
     typeof t.decimals === "number" &&
     Number.isInteger(t.decimals) &&

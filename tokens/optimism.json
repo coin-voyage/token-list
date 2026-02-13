@@ -1,7 +1,6 @@
 [
   {
     "name": "Ethereum",
-    "address": null,
     "ticker": "ETH",
     "decimals": 18,
     "chainId": 10,

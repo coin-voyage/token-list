@@ -6,5 +6,6 @@
   { "chainId": 8453, "name": "Base", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" },
   { "chainId": 10, "name": "Optimism", "logoURI": "https://assets.coingecko.com/coins/images/25244/standard/Optimism.png?1696524385" },
   { "chainId": 56, "name": "BNB Smart Chain", "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970" },
-  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" }
+  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628" },
+  { "chainId": 137, "name": "Polygon", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/polygon.png?1696501628" }
 ]

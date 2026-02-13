@@ -1,7 +1,6 @@
 [
     {
       "name": "Sui",
-      "address": "0x2::sui::SUI",
       "ticker": "SUI",
       "decimals": 9,
       "chainId": 30000000000002,

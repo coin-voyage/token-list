@@ -1,7 +1,6 @@
 [
   {
     "name": "Solana",
-    "address": "So11111111111111111111111111111111111111112",
     "ticker": "SOL",
     "decimals": 9,
     "chainId": 30000000000001,
