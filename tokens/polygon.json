@@ -4,7 +4,7 @@
         "ticker": "MATIC",
         "decimals": 18,
         "chainId": 137,
-        "logoURI": "https://assets.coingecko.com/coins/images/3894/standard/matic-token-icon.png?1649622744"
+        "logoURI": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png"
     },
     {
         "name": "USD Coin",
