@@ -7,11 +7,43 @@
     "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"
   },
   {
-    "chainId": 8453,
-    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "name": "USD Coin",
     "ticker": "USDC",
+    "chainId": 8453,
+    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "decimals": 6,
     "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
-  }
+  },
+  {
+    "name": "EURC",
+    "ticker": "EURC",
+    "chainId": 8453,
+    "address": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/26045/standard/euro.png"
+  },
+  {
+    "name": "Coinbase Wrapped BTC",
+    "ticker": "cbBTC",
+    "chainId": 8453,
+    "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+    "decimals": 8,
+    "logoURI": "https://assets.coingecko.com/coins/images/40143/standard/cbbtc.webp"
+  },
+  {
+    "name": "Dai Stablecoin",
+    "ticker": "DAI",
+    "chainId": 8453,
+    "address": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
+    "decimals": 18,
+    "logoURI": "https://ethereum-optimism.github.io/data/DAI/logo.svg"
+  },
+  {
+    "name": "Venice Token",
+    "ticker": "VVV",
+    "chainId": 8453,
+    "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/54023/standard/Venice_Token_(1).png?1738017546"
+  },
 ]
