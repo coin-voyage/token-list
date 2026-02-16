@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Re-generate tokenlist.json before every commit
+pnpm run build:tokenlist
+
+# Stage the freshly built file so it's included in the commit
+git add tokenlist.json
