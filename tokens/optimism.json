@@ -7,11 +7,27 @@
     "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"
   },
   {
-    "chainId": 10,
-    "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
     "name": "USDCoin",
     "ticker": "USDC",
+    "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+    "chainId": 10,
     "decimals": 6,
     "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
-  }
+  },
+  {
+    "name": "Optimism",
+    "ticker": "OP",
+    "address": "0x4200000000000000000000000000000000000042",
+    "chainId": 10,
+    "decimals": 18,
+    "logoURI": "https://ethereum-optimism.github.io/data/OP/logo.png"
+  },
+  {
+    "name": "Velodrome Finance",
+    "ticker": "VELO",
+    "address": "0x9560e827aF36c94D2Ac33a39bCE1Fe78631088Db",
+    "chainId": 10,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/12538/standard/Logo_200x_200.png?1696512350"
+  },
 ]
