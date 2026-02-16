@@ -4,7 +4,7 @@
         "ticker": "BNB",
         "decimals": 18,
         "chainId": 56,
-        "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970"
+        "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png"
     },
     {
         "name": "Wrapped BNB",
@@ -19,7 +19,7 @@
         "ticker": "BSC-USD",
         "decimals": 6,
         "chainId": 56,
-        "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png?1696501661",
+        "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
         "address": "0x55d398326f99059ff775485246999027b3197955"
     },
     {
@@ -28,6 +28,6 @@
         "chainId": 56,
         "address": "0x000Ae314E2A2172a039B26378814C252734f556A",
         "decimals": 18,
-        "logoURI": "https://coin-images.coingecko.com/coins/images/69040/large/_ASTER.png?1757326782"
+        "logoURI": "https://coin-images.coingecko.com/coins/images/69040/large/_ASTER.png"
     }
 ]

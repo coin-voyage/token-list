@@ -1,17 +1,33 @@
 [
-    {
-        "name": "Polygon",
-        "ticker": "MATIC",
-        "decimals": 18,
-        "chainId": 137,
-        "logoURI": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png"
-    },
-    {
-        "name": "USD Coin",
-        "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
-        "ticker": "USDC",
-        "decimals": 6,
-        "chainId": 137,
-        "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694"
-    }
+  {
+    "name": "USD Coin",
+    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+    "ticker": "USDC",
+    "decimals": 6,
+    "chainId": 137,
+    "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+  },
+  {
+    "name": "USDT0",
+    "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+    "ticker": "USDT0",
+    "decimals": 6,
+    "chainId": 137,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53705/large/usdt0.jpg"
+  },
+  {
+    "name": "Dai Stablecoin",
+    "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+    "ticker": "DAI",
+    "decimals": 18,
+    "chainId": 137,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+  },
+  {
+    "name": "Polygon",
+    "ticker": "MATIC",
+    "decimals": 18,
+    "chainId": 137,
+    "logoURI": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png"
+  }
 ]

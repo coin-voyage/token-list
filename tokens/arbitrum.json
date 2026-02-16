@@ -4,14 +4,46 @@
     "ticker": "ETH",
     "decimals": 18,
     "chainId": 42161,
-    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"
+    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png"
   },
   {
     "name": "USD Coin",
-    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
     "ticker": "USDC",
+    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
     "decimals": 6,
     "chainId": 42161,
-    "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694"
+    "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+  },
+  {
+    "name": "USDT0",
+    "ticker": "USDT0",
+    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+    "decimals": 6,
+    "chainId": 42161,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53705/large/usdt0.jpg"
+  },
+  {
+    "name": "Wrapped BTC",
+    "ticker": "WBTC",
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+    "decimals": 8,
+    "chainId": 42161,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/39532/large/WBTCLOGO.png"
+  },
+  {
+    "name": "Coinbase Wrapped BTC",
+    "ticker": "cbBTC",
+    "chainId": 42161,
+    "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+    "decimals": 8,
+    "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp"
+  },
+  {
+    "name": "Arbitrum",
+    "ticker": "ARB",
+    "chainId": 42161,
+    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/16547/large/arb.jpg"
   }
 ]

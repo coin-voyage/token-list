@@ -4,7 +4,7 @@
       "ticker": "SUI",
       "decimals": 9,
       "chainId": 30000000000002,
-      "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png?1727791290"
+      "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png"
     },
     {
       "name": "USD Coin",
@@ -12,7 +12,23 @@
       "ticker": "USDC",
       "decimals": 6,
       "chainId": 30000000000002,
-      "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png?1696506694"
+      "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+    },
+    {
+      "name": "Tether USD",
+      "address": "0x375f70cf2ae4c00bf37117d0c85a2c71545e6ee05c4a5c7d282cd66a4504b068::usdt::USDT",
+      "ticker": "USDT",
+      "decimals": 6,
+      "chainId": 30000000000002,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/56062/large/usdt.jpg"
+    },
+    {
+      "name": "DeepBook Token",
+      "address": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
+      "ticker": "DEEP",
+      "decimals": 6,
+      "chainId": 30000000000002,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/50648/large/DEEP_Logo_256x256_px_%282%29.png"
     }
   ]
   

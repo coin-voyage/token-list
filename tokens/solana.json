@@ -4,7 +4,7 @@
     "ticker": "SOL",
     "decimals": 9,
     "chainId": 30000000000001,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989"
+    "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg"
   },
   {
     "name": "USD Coin",
@@ -12,7 +12,23 @@
     "ticker": "USDC",
     "decimals": 6,
     "chainId": 30000000000001,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png?1696506694"
+    "logoURI": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png"
+  },
+  {
+    "name": "Tether USD",
+    "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+    "ticker": "USDT",
+    "decimals": 6,
+    "chainId": 30000000000001,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/56062/large/usdt.jpg"
+  },
+  {
+    "name": "Coinbase Wrapped BTC",
+    "ticker": "cbBTC",
+    "chainId": 30000000000001,
+    "address": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+    "decimals": 8,
+    "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp"
   },
   {
     "name": "Trump Coin",
@@ -20,6 +36,6 @@
     "ticker": "TRUMP",
     "decimals": 6,
     "chainId": 30000000000001,
-    "logoURI": "https://coin-images.coingecko.com/coins/images/53746/large/trump.png?1737171561"
+    "logoURI": "https://coin-images.coingecko.com/coins/images/53746/large/trump.png"
   }
 ]

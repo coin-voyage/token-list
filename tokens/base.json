@@ -4,7 +4,7 @@
     "ticker": "ETH",
     "decimals": 18,
     "chainId": 8453,
-    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"
+    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png"
   },
   {
     "name": "USD Coin",
@@ -44,6 +44,6 @@
     "chainId": 8453,
     "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/54023/standard/Venice_Token_(1).png?1738017546"
-  },
+    "logoURI": "https://assets.coingecko.com/coins/images/54023/standard/Venice_Token_(1).png"
+  }
 ]

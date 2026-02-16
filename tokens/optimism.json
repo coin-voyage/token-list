@@ -4,7 +4,7 @@
     "ticker": "ETH",
     "decimals": 18,
     "chainId": 10,
-    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628"
+    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png"
   },
   {
     "name": "USDCoin",
@@ -28,6 +28,6 @@
     "address": "0x9560e827aF36c94D2Ac33a39bCE1Fe78631088Db",
     "chainId": 10,
     "decimals": 18,
-    "logoURI": "https://assets.coingecko.com/coins/images/12538/standard/Logo_200x_200.png?1696512350"
-  },
+    "logoURI": "https://assets.coingecko.com/coins/images/12538/standard/Logo_200x_200.png"
+  }
 ]
