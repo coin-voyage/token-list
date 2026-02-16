@@ -23,6 +23,14 @@
     "logoURI": "https://coin-images.coingecko.com/coins/images/53705/large/usdt0.jpg"
   },
   {
+    "name": "PayPal USD",
+    "address": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+    "ticker": "PYUSD",
+    "decimals": 6,
+    "chainId": 42161,
+    "logoURI": "https://coin-images.coingecko.com/coins/images/31212/large/PYUSD_Token_Logo_2x.png"
+  },
+  {
     "name": "Wrapped BTC",
     "ticker": "WBTC",
     "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",

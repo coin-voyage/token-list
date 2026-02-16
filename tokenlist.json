@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-02-16T09:16:32.072Z",
+  "timestamp": "2026-02-16T09:24:04.551Z",
   "chains": [
     {
       "chainId": 1,
@@ -62,6 +62,14 @@
           "decimals": 18,
           "chainId": 1,
           "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+        },
+        {
+          "name": "PayPal USD",
+          "address": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+          "ticker": "PYUSD",
+          "decimals": 6,
+          "chainId": 1,
+          "logoURI": "https://coin-images.coingecko.com/coins/images/31212/large/PYUSD_Token_Logo_2x.png"
         },
         {
           "name": "Wrapped BTC",
@@ -152,6 +160,14 @@
           "decimals": 6,
           "chainId": 30000000000001,
           "logoURI": "https://coin-images.coingecko.com/coins/images/56062/large/usdt.jpg"
+        },
+        {
+          "name": "PayPal USD",
+          "address": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+          "ticker": "PYUSD",
+          "decimals": 6,
+          "chainId": 30000000000001,
+          "logoURI": "https://coin-images.coingecko.com/coins/images/31212/large/PYUSD_Token_Logo_2x.png"
         },
         {
           "name": "Coinbase Wrapped BTC",
@@ -404,6 +420,14 @@
           "decimals": 6,
           "chainId": 42161,
           "logoURI": "https://coin-images.coingecko.com/coins/images/53705/large/usdt0.jpg"
+        },
+        {
+          "name": "PayPal USD",
+          "address": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+          "ticker": "PYUSD",
+          "decimals": 6,
+          "chainId": 42161,
+          "logoURI": "https://coin-images.coingecko.com/coins/images/31212/large/PYUSD_Token_Logo_2x.png"
         },
         {
           "name": "Wrapped BTC",
