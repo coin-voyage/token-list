@@ -1,11 +1,11 @@
 [
-  { "chainId": 1, "name": "Ethereum", "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png" },
-  { "chainId": 30000000000001, "name": "Solana", "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg" },
-  { "chainId": 30000000000002, "name": "Sui", "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png" },
+  { "chainId": 1, "name": "Ethereum", "logoURI": "https://assets.coingecko.com/asset_platforms/images/279/standard/ethereum.png" },
+  { "chainId": 30000000000001, "name": "Solana", "logoURI": "https://assets.coingecko.com/asset_platforms/images/5/standard/solana.png" },
+  { "chainId": 30000000000002, "name": "Sui", "logoURI": "https://assets.coingecko.com/asset_platforms/images/126/standard/sui-ocean-square.png" },
   { "chainId": 20000000000001, "name": "Bitcoin", "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png" },
-  { "chainId": 8453, "name": "Base", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png" },
-  { "chainId": 10, "name": "Optimism", "logoURI": "https://assets.coingecko.com/coins/images/25244/standard/Optimism.png" },
-  { "chainId": 56, "name": "BNB Smart Chain", "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png" },
-  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png" },
-  { "chainId": 137, "name": "Polygon", "logoURI": "https://assets.coingecko.com/coins/images/279/standard/polygon.png" }
+  { "chainId": 8453, "name": "Base", "logoURI": "https://assets.coingecko.com/asset_platforms/images/131/standard/base.png" },
+  { "chainId": 10, "name": "Optimism", "logoURI": "https://assets.coingecko.com/asset_platforms/images/41/standard/optimism.png" },
+  { "chainId": 56, "name": "BNB Smart Chain", "logoURI": "https://assets.coingecko.com/asset_platforms/images/1/standard/bnb_smart_chain.png" },
+  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://assets.coingecko.com/asset_platforms/images/33/standard/AO_logomark.png" },
+  { "chainId": 137, "name": "Polygon", "logoURI": "https://assets.coingecko.com/asset_platforms/images/15/standard/polygon_pos.png" }
 ]

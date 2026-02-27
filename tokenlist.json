@@ -5,12 +5,12 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-02-16T09:24:15.255Z",
+  "timestamp": "2026-02-27T12:03:48.976Z",
   "chains": [
     {
       "chainId": 1,
       "name": "Ethereum",
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/279/standard/ethereum.png",
       "nativeCurrency": {
         "symbol": "ETH",
         "decimals": 18
@@ -132,7 +132,7 @@
     {
       "chainId": 30000000000001,
       "name": "Solana",
-      "logoURI": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/5/standard/solana.png",
       "nativeCurrency": {
         "symbol": "SOL",
         "decimals": 9
@@ -190,7 +190,7 @@
     {
       "chainId": 30000000000002,
       "name": "Sui",
-      "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/126/standard/sui-ocean-square.png",
       "nativeCurrency": {
         "symbol": "SUI",
         "decimals": 9
@@ -250,7 +250,7 @@
     {
       "chainId": 8453,
       "name": "Base",
-      "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/131/standard/base.png",
       "nativeCurrency": {
         "symbol": "ETH",
         "decimals": 18
@@ -308,7 +308,7 @@
     {
       "chainId": 10,
       "name": "Optimism",
-      "logoURI": "https://assets.coingecko.com/coins/images/25244/standard/Optimism.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/41/standard/optimism.png",
       "nativeCurrency": {
         "symbol": "ETH",
         "decimals": 18
@@ -350,7 +350,7 @@
     {
       "chainId": 56,
       "name": "BNB Smart Chain",
-      "logoURI": "https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/1/standard/bnb_smart_chain.png",
       "nativeCurrency": {
         "symbol": "BNB",
         "decimals": 18
@@ -392,7 +392,7 @@
     {
       "chainId": 42161,
       "name": "Arbitrum One",
-      "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/33/standard/AO_logomark.png",
       "nativeCurrency": {
         "symbol": "ETH",
         "decimals": 18
@@ -458,7 +458,7 @@
     {
       "chainId": 137,
       "name": "Polygon",
-      "logoURI": "https://assets.coingecko.com/coins/images/279/standard/polygon.png",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/15/standard/polygon_pos.png",
       "nativeCurrency": {
         "symbol": "MATIC",
         "decimals": 18
