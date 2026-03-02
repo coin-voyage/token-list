@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-02-27T12:03:48.976Z",
+  "timestamp": "2026-03-02T13:47:51.046Z",
   "chains": [
     {
       "chainId": 1,
@@ -117,7 +117,7 @@
           "ticker": "UNI",
           "decimals": 18,
           "chainId": 1,
-          "logoURI": "ipfs://QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg"
+          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png"
         },
         {
           "name": "ChainLink Token",
