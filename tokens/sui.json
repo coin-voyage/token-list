@@ -12,7 +12,7 @@
       "ticker": "USDC",
       "decimals": 6,
       "chainId": 30000000000002,
-      "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+      "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
     },
     {
       "name": "Tether USD",
@@ -20,7 +20,7 @@
       "ticker": "USDT",
       "decimals": 6,
       "chainId": 30000000000002,
-      "logoURI": "https://coin-images.coingecko.com/coins/images/56062/large/usdt.jpg"
+      "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
     },
     {
       "name": "DeepBook Token",
@@ -28,7 +28,7 @@
       "ticker": "DEEP",
       "decimals": 6,
       "chainId": 30000000000002,
-      "logoURI": "https://coin-images.coingecko.com/coins/images/50648/large/DEEP_Logo_256x256_px_%282%29.png"
+      "logoURI": "https://assets.coingecko.com/coins/images/50648/standard/DEEP_Logo_256x256_px_%282%29.png"
     }
   ]
   

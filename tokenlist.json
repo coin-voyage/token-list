@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-03-02T13:47:51.046Z",
+  "timestamp": "2026-03-02T13:56:57.103Z",
   "chains": [
     {
       "chainId": 1,
@@ -29,7 +29,7 @@
           "ticker": "USDC",
           "decimals": 6,
           "chainId": 1,
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "chainId": 1,
@@ -37,7 +37,7 @@
           "name": "Euro Coin",
           "ticker": "EURC",
           "decimals": 6,
-          "logoURI": "https://assets.coingecko.com/coins/images/26045/thumb/euro-coin.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/26045/standard/EURC.png"
         },
         {
           "name": "Tether USD",
@@ -45,7 +45,7 @@
           "ticker": "USDT",
           "decimals": 6,
           "chainId": 1,
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
         },
         {
           "name": "Tether Gold",
@@ -61,7 +61,7 @@
           "ticker": "DAI",
           "decimals": 18,
           "chainId": 1,
-          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/9956/standard/Badge_Dai.png"
         },
         {
           "name": "PayPal USD",
@@ -117,7 +117,7 @@
           "ticker": "UNI",
           "decimals": 18,
           "chainId": 1,
-          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uniswap-logo.png"
         },
         {
           "name": "ChainLink Token",
@@ -125,7 +125,7 @@
           "ticker": "LINK",
           "decimals": 18,
           "chainId": 1,
-          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/877/standard/Chainlink_Logo_500.png"
         }
       ]
     },
@@ -151,7 +151,7 @@
           "ticker": "USDC",
           "decimals": 6,
           "chainId": 30000000000001,
-          "logoURI": "https://coin-images.coingecko.com/coins/images/6319/large/usdc.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "name": "Tether USD",
@@ -159,7 +159,7 @@
           "ticker": "USDT",
           "decimals": 6,
           "chainId": 30000000000001,
-          "logoURI": "https://coin-images.coingecko.com/coins/images/56062/large/usdt.jpg"
+          "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
         },
         {
           "name": "PayPal USD",
@@ -209,7 +209,7 @@
           "ticker": "USDC",
           "decimals": 6,
           "chainId": 30000000000002,
-          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "name": "Tether USD",
@@ -217,7 +217,7 @@
           "ticker": "USDT",
           "decimals": 6,
           "chainId": 30000000000002,
-          "logoURI": "https://coin-images.coingecko.com/coins/images/56062/large/usdt.jpg"
+          "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
         },
         {
           "name": "DeepBook Token",
@@ -225,7 +225,7 @@
           "ticker": "DEEP",
           "decimals": 6,
           "chainId": 30000000000002,
-          "logoURI": "https://coin-images.coingecko.com/coins/images/50648/large/DEEP_Logo_256x256_px_%282%29.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/50648/standard/DEEP_Logo_256x256_px_%282%29.png"
         }
       ]
     },
@@ -269,7 +269,7 @@
           "chainId": 8453,
           "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "decimals": 6,
-          "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "name": "EURC",
@@ -277,7 +277,7 @@
           "chainId": 8453,
           "address": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
           "decimals": 6,
-          "logoURI": "https://assets.coingecko.com/coins/images/26045/standard/euro.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/26045/standard/EURC.png"
         },
         {
           "name": "Coinbase Wrapped BTC",
@@ -293,7 +293,7 @@
           "chainId": 8453,
           "address": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
           "decimals": 18,
-          "logoURI": "https://ethereum-optimism.github.io/data/DAI/logo.svg"
+          "logoURI": "https://assets.coingecko.com/coins/images/9956/standard/Badge_Dai.png"
         },
         {
           "name": "Venice Token",
@@ -327,7 +327,7 @@
           "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
           "chainId": 10,
           "decimals": 6,
-          "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "name": "Optimism",
@@ -411,7 +411,7 @@
           "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
           "decimals": 6,
           "chainId": 42161,
-          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "name": "USDT0",
@@ -470,7 +470,7 @@
           "ticker": "USDC",
           "decimals": 6,
           "chainId": 137,
-          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/usdc.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
           "name": "USDT0",
@@ -486,7 +486,7 @@
           "ticker": "DAI",
           "decimals": 18,
           "chainId": 137,
-          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+          "logoURI": "https://assets.coingecko.com/coins/images/9956/standard/Badge_Dai.png"
         },
         {
           "name": "Polygon",
