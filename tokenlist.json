@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-03-02T13:56:57.103Z",
+  "timestamp": "2026-03-03T16:05:46.489Z",
   "chains": [
     {
       "chainId": 1,
@@ -202,6 +202,14 @@
           "decimals": 9,
           "chainId": 30000000000002,
           "logoURI": "https://assets.coingecko.com/coins/images/26375/standard/sui-ocean-square.png"
+        },
+        {
+          "name": "Sui Dollar",
+          "address": "0x44f838219cf67b058f3b37907b655f226153c18e33dfcd0da559a844fea9b1c1::usdsui::USDSUI",
+          "ticker": "USDSUI",
+          "decimals": 6,
+          "chainId": 30000000000002,
+          "logoURI": "https://strapi-space-bucket-fra1-1.fra1.cdn.digitaloceanspaces.com/usd_sui_9fe1dc4ef8.png"
         },
         {
           "name": "USD Coin",
