@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-03-03T16:05:46.489Z",
+  "timestamp": "2026-04-03T13:04:45.088Z",
   "chains": [
     {
       "chainId": 1,
@@ -24,7 +24,7 @@
           "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png"
         },
         {
-          "name": "USDCoin",
+          "name": "USD Coin",
           "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "ticker": "USDC",
           "decimals": 6,
@@ -400,7 +400,7 @@
     {
       "chainId": 42161,
       "name": "Arbitrum One",
-      "logoURI": "https://assets.coingecko.com/asset_platforms/images/33/standard/AO_logomark.png",
+      "logoURI": "https://travelswap.mo.cloudinary.net/cv/icons/arbitrum.png",
       "nativeCurrency": {
         "symbol": "ETH",
         "decimals": 18
