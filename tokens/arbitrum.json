@@ -4,7 +4,7 @@
     "ticker": "ETH",
     "decimals": 18,
     "chainId": 42161,
-    "logoURI": "https://assets.coingecko.com/coins/images/279/standard/ethereum.png"
+    "logoURI": "https://didcmo2jyrnku.cloudfront.net/assets/eth.png"
   },
   {
     "name": "USD Coin",

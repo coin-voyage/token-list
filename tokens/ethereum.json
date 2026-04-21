@@ -4,7 +4,7 @@
     "ticker": "ETH",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png"
+    "logoURI": "https://didcmo2jyrnku.cloudfront.net/assets/eth.png"
   },
   {
     "name": "USD Coin",
@@ -100,7 +100,7 @@
     "ticker": "UNI",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://assets.coingecko.com/coins/images/12504/standard/uniswap-logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png"
   },
   {
     "name": "ChainLink Token",
