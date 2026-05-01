@@ -1,0 +1,63 @@
+name: Tokenlist
+
+on:
+  pull_request:
+    paths:
+      - "chains.json"
+      - "package.json"
+      - "scripts/build-tokenlist.mjs"
+      - "tokens/**/*.json"
+      - "tokenlist.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "chains.json"
+      - "package.json"
+      - "scripts/build-tokenlist.mjs"
+      - "tokens/**/*.json"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 10.20.0
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build tokenlist
+        run: pnpm run build:tokenlist
+
+      - name: Commit generated tokenlist
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet -- tokenlist.json; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tokenlist.json
+          git commit -m "build tokenlist"
+          git push
+
+      - name: Verify generated tokenlist is committed
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- tokenlist.json

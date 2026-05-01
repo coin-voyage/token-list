@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-04-21T14:23:02.346Z",
+  "timestamp": "2026-05-01T09:31:49.243Z",
   "chains": [
     {
       "chainId": 1,
@@ -482,7 +482,7 @@
       "tokens": [
         {
           "name": "USD Coin",
-          "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+          "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
           "ticker": "USDC",
           "decimals": 6,
           "chainId": 137,

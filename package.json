@@ -15,7 +15,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build:tokenlist": "node scripts/build-tokenlist.mjs",
-    "prepare": "git config core.hooksPath .githooks"
+    "build:tokenlist": "node scripts/build-tokenlist.mjs"
   }
 }

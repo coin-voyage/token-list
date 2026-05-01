@@ -12,45 +12,47 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, "..");
 const tokensDir = join(rootDir, "tokens");
 const chainsPath = join(rootDir, "chains.json");
+const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
+const MAX_DECIMALS = 255;
 
 if (!existsSync(tokensDir) || !statSync(tokensDir).isDirectory()) {
   console.error("Error: tokens/ directory is missing or not a directory.");
   process.exit(1);
 }
 
-let pkg = { version: "0.0.0", tokenListName: "Coinvoyage Token List" };
-try {
-  pkg = JSON.parse(readFileSync(join(rootDir, "package.json"), "utf8"));
-} catch (e) {
-  console.error("Error: could not read package.json:", e.message);
-  process.exit(1);
+function readJson(path, label) {
+  try {
+    return JSON.parse(readFileSync(path, "utf8"));
+  } catch (e) {
+    console.error(`Error: could not read ${label}:`, e.message);
+    process.exit(1);
+  }
 }
 
-// Chain metadata: chainId -> { name, logoURI }, and order from chains.json
-const { chainsList, chainsOrder } = (() => {
+function readChains() {
   try {
-    const raw = readFileSync(chainsPath, "utf8");
-    const arr = JSON.parse(raw);
-    const map = new Map();
-    const order = [];
-    for (const c of Array.isArray(arr) ? arr : []) {
-      if (c && Number.isFinite(c.chainId)) {
-        const id = Number(c.chainId);
-        map.set(id, {
-          name: typeof c.name === "string" ? c.name : `Chain ${id}`,
-          logoURI: typeof c.logoURI === "string" ? c.logoURI : null,
-        });
-        order.push(id);
-      }
-    }
-    return { chainsList: map, chainsOrder: order };
+    const chains = JSON.parse(readFileSync(chainsPath, "utf8"));
+    const validChains = Array.isArray(chains)
+      ? chains.filter((chain) => chain && Number.isFinite(chain.chainId))
+      : [];
+
+    return {
+      order: validChains.map((chain) => Number(chain.chainId)),
+      meta: new Map(
+        validChains.map((chain) => [
+          Number(chain.chainId),
+          {
+            name: typeof chain.name === "string" ? chain.name : `Chain ${chain.chainId}`,
+            logoURI: typeof chain.logoURI === "string" ? chain.logoURI : null,
+          },
+        ])
+      ),
+    };
   } catch (e) {
     console.warn("Warning: chains.json missing or invalid, chain names/logoURIs will fall back to native token.", e.message);
-    return { chainsList: new Map(), chainsOrder: [] };
+    return { order: [], meta: new Map() };
   }
-})();
-
-const MAX_DECIMALS = 255;
+}
 
 function isValidToken(t) {
   if (!t || typeof t !== "object") return false;
@@ -78,38 +80,39 @@ function isValidToken(t) {
 /** Normalize address for dedupe: null, undefined, or 0x0... treated as native key. */
 function tokenKey(t) {
   const a = t.address;
-  if (a == null || a === "" || a === "0x0000000000000000000000000000000000000000")
+  if (a == null || a === "" || a === ZERO_ADDRESS)
     return `${t.chainId}:native`;
   return `${t.chainId}:${String(a).toLowerCase()}`;
 }
 
+function isNativeToken(t) {
+  return t.address === null || t.address === undefined || t.address === ZERO_ADDRESS;
+}
+
+function buildChain(chainId, tokens, chainMeta = {}) {
+  const native = tokens.find(isNativeToken);
+  return {
+    chainId: Number(chainId),
+    name: chainMeta.name ?? native?.name ?? `Chain ${chainId}`,
+    logoURI: chainMeta.logoURI ?? native?.logoURI ?? null,
+    nativeCurrency: native ? { symbol: native.ticker, decimals: native.decimals } : null,
+    tokens,
+  };
+}
+
+const pkg = readJson(join(rootDir, "package.json"), "package.json");
+const chainsConfig = readChains();
 const chainFiles = readdirSync(tokensDir)
   .filter((f) => f.endsWith(".json"))
   .sort();
 
-let hadParseError = false;
 const seenKeys = new Set();
 
 // Group by chainId, preserving token order from each file (no global sort)
 const byChainId = new Map();
 let totalTokens = 0;
 for (const file of chainFiles) {
-  const path = join(tokensDir, file);
-  let raw;
-  try {
-    raw = readFileSync(path, "utf8");
-  } catch (e) {
-    console.error(`Error: could not read ${file}:`, e.message);
-    process.exit(1);
-  }
-  let list;
-  try {
-    list = JSON.parse(raw);
-  } catch (e) {
-    console.error(`Error: ${file} is invalid JSON:`, e.message);
-    hadParseError = true;
-    continue;
-  }
+  const list = readJson(join(tokensDir, file), file);
   const arr = Array.isArray(list) ? list : [];
   for (const t of arr) {
     if (!isValidToken(t)) {
@@ -134,62 +137,25 @@ for (const file of chainFiles) {
   }
 }
 
-if (hadParseError) {
-  console.error("Build failed due to invalid JSON in one or more token files.");
-  process.exit(1);
-}
-
 if (totalTokens === 0) {
   console.error("Error: no valid tokens found. Add token JSON files under tokens/.");
   process.exit(1);
 }
 
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
-const chains = [];
-// First add chains in chains.json order
-const seenChainIds = new Set();
-for (const chainId of chainsOrder) {
-  const tokens = byChainId.get(chainId);
-  if (!tokens) continue;
-  seenChainIds.add(chainId);
-  const chainMeta = chainsList.get(Number(chainId)) ?? {};
-  const native = tokens.find(
-    (t) =>
-      t.address === null ||
-      t.address === undefined ||
-      t.address === ZERO_ADDRESS
-  );
-  chains.push({
-    chainId: Number(chainId),
-    name: chainMeta.name ?? native?.name ?? `Chain ${chainId}`,
-    logoURI: chainMeta.logoURI ?? native?.logoURI ?? null,
-    nativeCurrency: native
-      ? { symbol: native.ticker, decimals: native.decimals }
-      : null,
-    tokens,
-  });
-}
-// Then any chains with tokens that aren't in chains.json (append in chainId order for stable output)
-const remainingChainIds = [...byChainId.keys()].filter((id) => !seenChainIds.has(id)).sort((a, b) => a - b);
-for (const chainId of remainingChainIds) {
-  const tokens = byChainId.get(chainId);
-  const chainMeta = chainsList.get(Number(chainId)) ?? {};
-  const native = tokens.find(
-    (t) =>
-      t.address === null ||
-      t.address === undefined ||
-      t.address === ZERO_ADDRESS
-  );
-  chains.push({
-    chainId: Number(chainId),
-    name: chainMeta.name ?? native?.name ?? `Chain ${chainId}`,
-    logoURI: chainMeta.logoURI ?? native?.logoURI ?? null,
-    nativeCurrency: native
-      ? { symbol: native.ticker, decimals: native.decimals }
-      : null,
-    tokens,
-  });
-}
+const configuredChainIds = chainsConfig.order.filter((chainId) => byChainId.has(chainId));
+const configuredChainIdSet = new Set(configuredChainIds);
+const extraChainIds = [...byChainId.keys()]
+  .filter((chainId) => !configuredChainIdSet.has(chainId))
+  .sort((a, b) => a - b);
+
+const orderedChainIds = [
+  ...configuredChainIds,
+  ...extraChainIds,
+];
+
+const chains = orderedChainIds.map((chainId) =>
+  buildChain(chainId, byChainId.get(chainId), chainsConfig.meta.get(chainId))
+);
 
 const [major = 0, minor = 0, patch = 0] = (pkg.version || "0.0.0").split(".").map(Number);
 const tokenlist = {
