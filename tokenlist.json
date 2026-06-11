@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-06-01T11:56:02.197Z",
+  "timestamp": "2026-06-11T12:39:13.616Z",
   "chains": [
     {
       "chainId": 1,
@@ -168,6 +168,14 @@
           "decimals": 6,
           "chainId": 30000000000001,
           "logoURI": "https://coin-images.coingecko.com/coins/images/31212/large/PYUSD_Token_Logo_2x.png"
+        },
+        {
+          "name": "Pax Dollar",
+          "address": "HVbpJAQGNpkgBaYBZQBR1t7yFdvaYVp2vCQQfKKEN4tM",
+          "ticker": "USDP",
+          "decimals": 6,
+          "chainId": 30000000000001,
+          "logoURI": "https://assets.coingecko.com/coins/images/6013/standard/Pax_Dollar.png?1696506427"
         },
         {
           "name": "Coinbase Wrapped BTC",
