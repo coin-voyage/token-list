@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-06-11T12:39:13.616Z",
+  "timestamp": "2026-06-22T14:10:21.939Z",
   "chains": [
     {
       "chainId": 1,
@@ -374,7 +374,7 @@
     {
       "chainId": 56,
       "name": "BNB Smart Chain",
-      "logoURI": "https://app.uniswap.org/assets/bnb-logo-0mkMPUtV.png",
+      "logoURI": "https://app.uniswap.org/assets/bnb-logo-Ujb8xjX_.png",
       "nativeCurrency": {
         "symbol": "BNB",
         "decimals": 18
