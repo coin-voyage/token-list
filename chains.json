@@ -7,5 +7,6 @@
   { "chainId": 10, "name": "Optimism", "logoURI": "https://assets.coingecko.com/asset_platforms/images/41/standard/optimism.png" },
   { "chainId": 56, "name": "BNB Smart Chain", "logoURI": "https://app.uniswap.org/assets/bnb-logo-Ujb8xjX_.png" },
   { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://travelswap.mo.cloudinary.net/cv/icons/arbitrum.png" },
-  { "chainId": 137, "name": "Polygon", "logoURI": "https://assets.coingecko.com/asset_platforms/images/15/standard/polygon_pos.png" }
+  { "chainId": 137, "name": "Polygon", "logoURI": "https://assets.coingecko.com/asset_platforms/images/15/standard/polygon_pos.png" },
+  { "chainId": 4663, "name": "Robinhood Chain", "logoURI": "https://assets.coingecko.com/asset_platforms/images/102132299/standard/robinhood.png" }
 ]

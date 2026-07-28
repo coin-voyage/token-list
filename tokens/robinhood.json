@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Ethereum",
+    "ticker": "ETH",
+    "decimals": 18,
+    "chainId": 4663,
+    "logoURI": "https://didcmo2jyrnku.cloudfront.net/assets/eth.png"
+  },
+  {
+    "name": "Wrapped Ether",
+    "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+    "ticker": "WETH",
+    "decimals": 18,
+    "chainId": 4663,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+  },
+  {
+    "name": "Global Dollar",
+    "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+    "ticker": "USDG",
+    "decimals": 6,
+    "chainId": 4663,
+    "logoURI": "https://assets.coingecko.com/coins/images/51281/standard/GDN_USDG_Token_200x200.png"
+  }
+]

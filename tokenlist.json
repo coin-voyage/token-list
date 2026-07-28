@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-06-22T14:10:21.939Z",
+  "timestamp": "2026-07-28T13:33:52.472Z",
   "chains": [
     {
       "chainId": 1,
@@ -518,6 +518,40 @@
           "decimals": 18,
           "chainId": 137,
           "logoURI": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png"
+        }
+      ]
+    },
+    {
+      "chainId": 4663,
+      "name": "Robinhood Chain",
+      "logoURI": "https://assets.coingecko.com/asset_platforms/images/102132299/standard/robinhood.png",
+      "nativeCurrency": {
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "tokens": [
+        {
+          "name": "Ethereum",
+          "ticker": "ETH",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://didcmo2jyrnku.cloudfront.net/assets/eth.png"
+        },
+        {
+          "name": "Wrapped Ether",
+          "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+          "ticker": "WETH",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+        },
+        {
+          "name": "Global Dollar",
+          "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+          "ticker": "USDG",
+          "decimals": 6,
+          "chainId": 4663,
+          "logoURI": "https://assets.coingecko.com/coins/images/51281/standard/GDN_USDG_Token_200x200.png"
         }
       ]
     }
