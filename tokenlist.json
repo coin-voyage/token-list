@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-07-28T13:33:52.472Z",
+  "timestamp": "2026-09-01T10:20:11.716Z",
   "chains": [
     {
       "chainId": 1,
@@ -552,6 +552,46 @@
           "decimals": 6,
           "chainId": 4663,
           "logoURI": "https://assets.coingecko.com/coins/images/51281/standard/GDN_USDG_Token_200x200.png"
+        },
+        {
+          "name": "Pons",
+          "address": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+          "ticker": "PONS",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://assets.coingecko.com/coins/images/102174571/standard/jhitvkisdq8fhxvimdkpcw7y3dx5.?1784093932"
+        },
+        {
+          "name": "Cash Cat",
+          "address": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+          "ticker": "CASHCAT",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://assets.coingecko.com/coins/images/102174280/standard/cashcat-logo.jpg?1782922765"
+        },
+        {
+          "name": "S&P 500",
+          "address": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+          "ticker": "SPY",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://assets.coingecko.com/coins/images/102174115/standard/0x117cc2133c37b721f49de2a7a74833232b3b4c0c.png?1782444578"
+        },
+        {
+          "name": "NVIDIA",
+          "address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+          "ticker": "NVDA",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://assets.coingecko.com/coins/images/102174110/standard/0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec.png?1782444565"
+        },
+        {
+          "name": "SpaceX",
+          "address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+          "ticker": "SPCX",
+          "decimals": 18,
+          "chainId": 4663,
+          "logoURI": "https://assets.coingecko.com/coins/images/102174129/standard/0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea.png?1782444614"
         }
       ]
     }
