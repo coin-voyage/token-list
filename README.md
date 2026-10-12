@@ -52,6 +52,23 @@ Single source of truth for supported chains and tokens. The consolidated **token
 
 If a chain has tokens but no entry in **chains.json**, the build falls back to the native token’s name/logo (or `"Chain <chainId>"`).
 
+### Adding a chain before production rollout
+
+Set `"preview": true` on its entry in `chains.json`. The chain and all its tokens
+are excluded from the standard `pnpm run build:tokenlist` output, including CI builds.
+Chains with `"preview": false` or without this field appear in both lists.
+
+Zcash is configured this way. Its source stays in `tokens/zcash.json`, ready for rollout.
+Run `pnpm run build:tokenlist:preview` to include preview chains in a separate
+`tokenlist.preview.json` for local or development use. Point the development app at
+that file; production should continue consuming `tokenlist.json`.
+Commit both generated lists so development can fetch `tokenlist.preview.json`
+through its GitHub raw URL. CI builds and checks both files, and updates them on main.
+
+To release a chain, remove `"preview": true` (or change it to `false`) and rebuild.
+The build requires a readable, valid `chains.json` so a broken config cannot bypass
+production exclusions.
+
 ---
 
 ## Structure of the consolidated file (`tokenlist.json`)

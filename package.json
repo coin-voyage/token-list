@@ -15,6 +15,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build:tokenlist": "node scripts/build-tokenlist.mjs"
+    "build:tokenlist": "node scripts/build-tokenlist.mjs",
+    "build:tokenlist:preview": "node scripts/build-tokenlist.mjs --preview"
   }
 }

@@ -2,6 +2,7 @@
  * Builds tokenlist.json from all chain JSON files in tokens/.
  * Run: pnpm run build:tokenlist
  * Output: tokenlist.json at repo root (commit and use via GitHub raw URL).
+ * --preview writes tokenlist.preview.json with unreleased chains included.
  * Exits with code 1 on unrecoverable errors so CI can fail the build.
  */
 import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from "fs";
@@ -14,6 +15,7 @@ const tokensDir = join(rootDir, "tokens");
 const chainsPath = join(rootDir, "chains.json");
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 const MAX_DECIMALS = 255;
+const includePreview = process.argv.includes("--preview");
 
 if (!existsSync(tokensDir) || !statSync(tokensDir).isDirectory()) {
   console.error("Error: tokens/ directory is missing or not a directory.");
@@ -32,12 +34,17 @@ function readJson(path, label) {
 function readChains() {
   try {
     const chains = JSON.parse(readFileSync(chainsPath, "utf8"));
-    const validChains = Array.isArray(chains)
-      ? chains.filter((chain) => chain && Number.isFinite(chain.chainId))
-      : [];
+    if (!Array.isArray(chains) || chains.some((chain) =>
+      !chain || !Number.isInteger(chain.chainId) || chain.chainId <= 0 ||
+      (chain.preview !== undefined && typeof chain.preview !== "boolean")
+    )) {
+      throw new Error("Expected an array of chains with positive integer chainId and optional boolean preview.");
+    }
+    const validChains = chains;
 
     return {
       order: validChains.map((chain) => Number(chain.chainId)),
+      preview: new Set(validChains.filter((chain) => chain.preview === true).map((chain) => Number(chain.chainId))),
       meta: new Map(
         validChains.map((chain) => [
           Number(chain.chainId),
@@ -49,8 +56,9 @@ function readChains() {
       ),
     };
   } catch (e) {
-    console.warn("Warning: chains.json missing or invalid, chain names/logoURIs will fall back to native token.", e.message);
-    return { order: [], meta: new Map() };
+    // A malformed config must not silently enable chains excluded from production.
+    console.error("Error: cannot build without a valid chains.json:", e.message);
+    process.exit(1);
   }
 }
 
@@ -119,6 +127,7 @@ for (const file of chainFiles) {
       console.warn(`Warning: invalid token in ${file}, skipping:`, t);
       continue;
     }
+    if (!includePreview && chainsConfig.preview.has(t.chainId)) continue;
     const key = tokenKey(t);
     if (seenKeys.has(key)) {
       console.warn(`Warning: duplicate token in ${file} (chainId=${t.chainId}, address=${t.address ?? "native"}), skipping.`);
@@ -165,7 +174,21 @@ const tokenlist = {
   chains,
 };
 
-const outPath = join(rootDir, "tokenlist.json");
+const outPath = join(rootDir, includePreview ? "tokenlist.preview.json" : "tokenlist.json");
+// Preserve the build timestamp when content is unchanged so CI can verify committed lists.
+if (existsSync(outPath)) {
+  try {
+    const previous = JSON.parse(readFileSync(outPath, "utf8"));
+    const { timestamp: previousTimestamp, ...previousContent } = previous;
+    const { timestamp, ...nextContent } = tokenlist;
+    if (typeof previousTimestamp === "string" &&
+      JSON.stringify(previousContent) === JSON.stringify(nextContent)) {
+      tokenlist.timestamp = previousTimestamp;
+    }
+  } catch {
+    // Replace an unreadable or invalid generated file with fresh output.
+  }
+}
 try {
   writeFileSync(outPath, JSON.stringify(tokenlist, null, 2), "utf8");
 } catch (e) {

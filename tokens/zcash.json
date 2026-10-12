@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Zcash",
+    "ticker": "ZEC",
+    "decimals": 8,
+    "chainId": 20000000000002,
+    "logoURI": "https://assets.coingecko.com/coins/images/486/standard/Brandmark-Yellow_%281%29.png"
+  }
+]
+  
