@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-10-12T07:38:46.185Z",
+  "timestamp": "2026-10-13T07:33:26.901Z",
   "chains": [
     {
       "chainId": 1,
@@ -260,6 +260,24 @@
           "decimals": 8,
           "chainId": 20000000000001,
           "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png"
+        }
+      ]
+    },
+    {
+      "chainId": 20000000000002,
+      "name": "Zcash",
+      "logoURI": "https://assets.coingecko.com/coins/images/486/standard/Brandmark-Yellow_%281%29.png",
+      "nativeCurrency": {
+        "symbol": "ZEC",
+        "decimals": 8
+      },
+      "tokens": [
+        {
+          "name": "Zcash",
+          "ticker": "ZEC",
+          "decimals": 8,
+          "chainId": 20000000000002,
+          "logoURI": "https://assets.coingecko.com/coins/images/486/standard/Brandmark-Yellow_%281%29.png"
         }
       ]
     },
