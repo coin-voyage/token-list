@@ -15,7 +15,10 @@
   ],
   "license": "MIT",
   "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "verify:onchain": "node scripts/verify-onchain.mjs",
     "build:tokenlist": "node scripts/build-tokenlist.mjs",
-    "build:tokenlist:preview": "node scripts/build-tokenlist.mjs --preview"
+    "build:tokenlist:preview": "node scripts/build-tokenlist.mjs --preview",
+    "build": "node scripts/build-tokenlist.mjs && node scripts/build-tokenlist.mjs --preview"
   }
 }

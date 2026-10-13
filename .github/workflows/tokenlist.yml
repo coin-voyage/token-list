@@ -1,11 +1,22 @@
 name: Tokenlist
 
+# check    validates the sources and compares decimals with the chains, on pull requests
+#          and on main. Nothing is generated or committed unless it passes.
+# release  (main only) regenerates the lists, commits them if they changed, then moves
+#          the `v1` tag to that commit. Consumers read the lists at `v1`, so the tag only
+#          ever points at a commit that passed `check` and contains the regenerated files.
+#
+# Loops: the bot commit and the tag are pushed with GITHUB_TOKEN, which does not start
+# workflow runs, and the generated files are not in the push path filter. Even if the
+# token is replaced by one that does trigger runs, the next run regenerates identical
+# files, commits nothing and stops.
+
 on:
   pull_request:
     paths:
       - "chains.json"
       - "package.json"
-      - "scripts/build-tokenlist.mjs"
+      - "scripts/**"
       - "tokens/**/*.json"
       - "tokenlist.json"
       - "tokenlist.preview.json"
@@ -16,55 +27,103 @@ on:
     paths:
       - "chains.json"
       - "package.json"
-      - "scripts/build-tokenlist.mjs"
+      - "scripts/**"
       - "tokens/**/*.json"
       - ".github/workflows/tokenlist.yml"
+  # Manual run on main: re-validates and (re)creates or advances `v1`.
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+# Runs on main are queued, never run side by side, so `v1` moves in commit order.
+concurrency:
+  group: tokenlist-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          version: 10.20.0
 
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Validate sources
+        run: node scripts/validate.mjs
 
-      - name: Build tokenlist
+      # Fails when a chain returns different decimals than listed. Tokens that could not
+      # be checked (every public RPC down) are listed in the log but do not fail the run.
+      - name: Verify decimals on-chain
+        run: node scripts/verify-onchain.mjs
+
+      - name: Build tokenlists
         run: |
-          pnpm run build:tokenlist
-          pnpm run build:tokenlist:preview
+          node scripts/build-tokenlist.mjs
+          node scripts/build-tokenlist.mjs --preview
 
-      - name: Commit generated tokenlist
-        if: github.event_name == 'push'
+      - name: Verify generated tokenlists are committed
+        if: github.event_name == 'pull_request'
+        run: |
+          git add tokenlist.json tokenlist.preview.json
+          if ! git diff --cached --exit-code -- tokenlist.json tokenlist.preview.json; then
+            echo "::error::tokenlist.json / tokenlist.preview.json are out of date. Run 'pnpm run build' and commit the result."
+            exit 1
+          fi
+
+  release:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the regenerated lists and move the v1 tag
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # full history and tags, for the ancestry check on v1
+          fetch-tags: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      # The build validates the sources again before writing anything.
+      - name: Build tokenlists
+        run: |
+          node scripts/build-tokenlist.mjs
+          node scripts/build-tokenlist.mjs --preview
+
+      # If main moved on since this run started, the push is rejected, the job fails
+      # and v1 stays where it is; the run for the newer commit takes over.
+      - name: Commit generated tokenlists
         run: |
           git add tokenlist.json tokenlist.preview.json
           if git diff --cached --quiet -- tokenlist.json tokenlist.preview.json; then
+            echo "Generated lists are already up to date."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "build tokenlist"
-          git push
+          git push origin HEAD:main
 
-      - name: Verify generated tokenlist is committed
-        if: github.event_name == 'pull_request'
+      # Runs after the commit step, so HEAD is the commit that contains the regenerated
+      # lists (the bot commit, or the pushed commit when nothing changed).
+      - name: Move v1 to the validated commit
         run: |
-          git add tokenlist.json tokenlist.preview.json
-          git diff --cached --exit-code -- tokenlist.json tokenlist.preview.json
+          if git rev-parse --quiet --verify refs/tags/v1 >/dev/null \
+            && ! git merge-base --is-ancestor refs/tags/v1 HEAD; then
+            echo "::error::v1 ($(git rev-parse refs/tags/v1)) is not an ancestor of $(git rev-parse HEAD); refusing to move it backwards or sideways."
+            exit 1
+          fi
+
+          git tag --force v1 HEAD
+          git push --force origin refs/tags/v1
+          echo "v1 -> $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"

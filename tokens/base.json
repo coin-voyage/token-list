@@ -50,7 +50,7 @@
     "name": "DIEM",
     "ticker": "DIEM",
     "chainId": 8453,
-    "address": "0xf4d97f2da56e8c3098f3a8d538db630a2606a024",
+    "address": "0xF4d97F2da56e8c3098f3a8D538DB630A2606a024",
     "decimals": 18,
     "logoURI": "https://assets.coingecko.com/coins/images/68436/standard/DIEM_SeaMid_-_200px.png"
   }

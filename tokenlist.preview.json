@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-10-13T10:33:36.571Z",
+  "timestamp": "2026-10-13T11:14:53.531Z",
   "chains": [
     {
       "chainId": 1,
@@ -51,7 +51,7 @@
           "name": "Tether Gold",
           "ticker": "XAUT",
           "decimals": 6,
-          "address": "0x68749665ff8d2d112fa859aa293f07a622782f38",
+          "address": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
           "chainId": 1,
           "logoURI": "https://coin-images.coingecko.com/coins/images/10481/large/Tether_Gold.png"
         },
@@ -65,7 +65,7 @@
         },
         {
           "name": "PayPal USD",
-          "address": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+          "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
           "ticker": "PYUSD",
           "decimals": 6,
           "chainId": 1,
@@ -97,7 +97,7 @@
         },
         {
           "name": "Pepe",
-          "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+          "address": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
           "ticker": "PEPE",
           "decimals": 18,
           "chainId": 1,
@@ -341,7 +341,7 @@
           "name": "DIEM",
           "ticker": "DIEM",
           "chainId": 8453,
-          "address": "0xf4d97f2da56e8c3098f3a8d538db630a2606a024",
+          "address": "0xF4d97F2da56e8c3098f3a8D538DB630A2606a024",
           "decimals": 18,
           "logoURI": "https://assets.coingecko.com/coins/images/68436/standard/DIEM_SeaMid_-_200px.png"
         }
@@ -419,7 +419,7 @@
           "decimals": 18,
           "chainId": 56,
           "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
-          "address": "0x55d398326f99059ff775485246999027b3197955"
+          "address": "0x55d398326f99059fF775485246999027B3197955"
         },
         {
           "name": "Aster",
@@ -450,7 +450,7 @@
         {
           "name": "USD Coin",
           "ticker": "USDC",
-          "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+          "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
           "decimals": 6,
           "chainId": 42161,
           "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
@@ -458,14 +458,14 @@
         {
           "name": "USDT0",
           "ticker": "USDT0",
-          "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+          "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
           "decimals": 6,
           "chainId": 42161,
           "logoURI": "https://coin-images.coingecko.com/coins/images/53705/large/usdt0.jpg"
         },
         {
           "name": "PayPal USD",
-          "address": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+          "address": "0x46850aD61C2B7d64d08c9C754F45254596696984",
           "ticker": "PYUSD",
           "decimals": 6,
           "chainId": 42161,
@@ -474,7 +474,7 @@
         {
           "name": "Wrapped BTC",
           "ticker": "WBTC",
-          "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+          "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
           "decimals": 8,
           "chainId": 42161,
           "logoURI": "https://coin-images.coingecko.com/coins/images/39532/large/WBTCLOGO.png"
@@ -491,7 +491,7 @@
           "name": "Arbitrum",
           "ticker": "ARB",
           "chainId": 42161,
-          "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
           "decimals": 18,
           "logoURI": "https://assets.coingecko.com/coins/images/16547/large/arb.jpg"
         }
@@ -508,7 +508,7 @@
       "tokens": [
         {
           "name": "USD Coin",
-          "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
           "ticker": "USDC",
           "decimals": 6,
           "chainId": 137,
@@ -557,7 +557,7 @@
         },
         {
           "name": "Wrapped Ether",
-          "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+          "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
           "ticker": "WETH",
           "decimals": 18,
           "chainId": 4663,
@@ -565,7 +565,7 @@
         },
         {
           "name": "Global Dollar",
-          "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+          "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
           "ticker": "USDG",
           "decimals": 6,
           "chainId": 4663,
@@ -573,7 +573,7 @@
         },
         {
           "name": "Pons",
-          "address": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+          "address": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
           "ticker": "PONS",
           "decimals": 18,
           "chainId": 4663,
@@ -581,7 +581,7 @@
         },
         {
           "name": "Cash Cat",
-          "address": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+          "address": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
           "ticker": "CASHCAT",
           "decimals": 18,
           "chainId": 4663,
@@ -589,7 +589,7 @@
         },
         {
           "name": "S&P 500",
-          "address": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+          "address": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
           "ticker": "SPY",
           "decimals": 18,
           "chainId": 4663,
@@ -597,7 +597,7 @@
         },
         {
           "name": "NVIDIA",
-          "address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+          "address": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
           "ticker": "NVDA",
           "decimals": 18,
           "chainId": 4663,
@@ -605,7 +605,7 @@
         },
         {
           "name": "SpaceX",
-          "address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+          "address": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
           "ticker": "SPCX",
           "decimals": 18,
           "chainId": 4663,

@@ -1,13 +1,13 @@
 [
-  { "chainId": 1, "name": "Ethereum", "logoURI": "https://assets.coingecko.com/asset_platforms/images/279/standard/ethereum.png" },
-  { "chainId": 30000000000001, "name": "Solana", "logoURI": "https://assets.coingecko.com/asset_platforms/images/5/standard/solana.png" },
-  { "chainId": 30000000000002, "name": "Sui", "logoURI": "https://assets.coingecko.com/asset_platforms/images/126/standard/sui-ocean-square.png" },
-  { "chainId": 20000000000001, "name": "Bitcoin", "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png" },
-  { "chainId": 20000000000002, "name": "Zcash", "logoURI": "https://assets.coingecko.com/coins/images/486/standard/Brandmark-Yellow_%281%29.png" },
-  { "chainId": 8453, "name": "Base", "logoURI": "https://assets.coingecko.com/asset_platforms/images/131/standard/base.png" },
-  { "chainId": 10, "name": "Optimism", "logoURI": "https://assets.coingecko.com/asset_platforms/images/41/standard/optimism.png" },
-  { "chainId": 56, "name": "BNB Smart Chain", "logoURI": "https://app.uniswap.org/assets/bnb-logo-Ujb8xjX_.png" },
-  { "chainId": 42161, "name": "Arbitrum One", "logoURI": "https://travelswap.mo.cloudinary.net/cv/icons/arbitrum.png" },
-  { "chainId": 137, "name": "Polygon", "logoURI": "https://assets.coingecko.com/asset_platforms/images/15/standard/polygon_pos.png" },
-  { "chainId": 4663, "name": "Robinhood Chain", "logoURI": "https://assets.coingecko.com/asset_platforms/images/102132299/standard/robinhood.png" }
+  { "chainId": 1, "name": "Ethereum", "family": "evm", "logoURI": "https://assets.coingecko.com/asset_platforms/images/279/standard/ethereum.png" },
+  { "chainId": 30000000000001, "name": "Solana", "family": "solana", "logoURI": "https://assets.coingecko.com/asset_platforms/images/5/standard/solana.png" },
+  { "chainId": 30000000000002, "name": "Sui", "family": "sui", "logoURI": "https://assets.coingecko.com/asset_platforms/images/126/standard/sui-ocean-square.png" },
+  { "chainId": 20000000000001, "name": "Bitcoin", "family": "utxo", "logoURI": "https://assets.coingecko.com/coins/images/1/standard/bitcoin.png" },
+  { "chainId": 20000000000002, "name": "Zcash", "family": "utxo", "logoURI": "https://assets.coingecko.com/coins/images/486/standard/Brandmark-Yellow_%281%29.png" },
+  { "chainId": 8453, "name": "Base", "family": "evm", "logoURI": "https://assets.coingecko.com/asset_platforms/images/131/standard/base.png" },
+  { "chainId": 10, "name": "Optimism", "family": "evm", "logoURI": "https://assets.coingecko.com/asset_platforms/images/41/standard/optimism.png" },
+  { "chainId": 56, "name": "BNB Smart Chain", "family": "evm", "logoURI": "https://app.uniswap.org/assets/bnb-logo-Ujb8xjX_.png" },
+  { "chainId": 42161, "name": "Arbitrum One", "family": "evm", "logoURI": "https://travelswap.mo.cloudinary.net/cv/icons/arbitrum.png" },
+  { "chainId": 137, "name": "Polygon", "family": "evm", "logoURI": "https://assets.coingecko.com/asset_platforms/images/15/standard/polygon_pos.png" },
+  { "chainId": 4663, "name": "Robinhood Chain", "family": "evm", "logoURI": "https://assets.coingecko.com/asset_platforms/images/102132299/standard/robinhood.png" }
 ]

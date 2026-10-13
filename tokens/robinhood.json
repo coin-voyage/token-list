@@ -8,7 +8,7 @@
   },
   {
     "name": "Wrapped Ether",
-    "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+    "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
     "ticker": "WETH",
     "decimals": 18,
     "chainId": 4663,
@@ -16,7 +16,7 @@
   },
   {
     "name": "Global Dollar",
-    "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+    "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
     "ticker": "USDG",
     "decimals": 6,
     "chainId": 4663,
@@ -24,7 +24,7 @@
   },
   {
     "name": "Pons",
-    "address": "0x39dbed3a2bd333467115de45665cc57f813c4571",
+    "address": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
     "ticker": "PONS",
     "decimals": 18,
     "chainId": 4663,
@@ -32,7 +32,7 @@
   },
   {
     "name": "Cash Cat",
-    "address": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
+    "address": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
     "ticker": "CASHCAT",
     "decimals": 18,
     "chainId": 4663,
@@ -40,7 +40,7 @@
   },
   {
     "name": "S&P 500",
-    "address": "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+    "address": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
     "ticker": "SPY",
     "decimals": 18,
     "chainId": 4663,
@@ -48,7 +48,7 @@
   },
   {
     "name": "NVIDIA",
-    "address": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "address": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
     "ticker": "NVDA",
     "decimals": 18,
     "chainId": 4663,
@@ -56,7 +56,7 @@
   },
   {
     "name": "SpaceX",
-    "address": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+    "address": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
     "ticker": "SPCX",
     "decimals": 18,
     "chainId": 4663,
