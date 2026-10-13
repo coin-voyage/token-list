@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-10-12T07:38:46.260Z",
+  "timestamp": "2026-10-13T10:33:36.571Z",
   "chains": [
     {
       "chainId": 1,
@@ -416,7 +416,7 @@
         {
           "name": "Binance Bridged USDT",
           "ticker": "BSC-USD",
-          "decimals": 6,
+          "decimals": 18,
           "chainId": 56,
           "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
           "address": "0x55d398326f99059ff775485246999027b3197955"
