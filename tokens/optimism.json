@@ -15,6 +15,14 @@
     "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
   },
   {
+    "name": "Bridged USDT",
+    "ticker": "USDT",
+    "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+    "chainId": 10,
+    "decimals": 6,
+    "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
+  },
+  {
     "name": "Optimism",
     "ticker": "OP",
     "address": "0x4200000000000000000000000000000000000042",

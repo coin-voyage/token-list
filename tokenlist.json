@@ -5,7 +5,7 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2026-10-13T11:14:53.418Z",
+  "timestamp": "2026-10-14T08:26:45.613Z",
   "chains": [
     {
       "chainId": 1,
@@ -306,6 +306,14 @@
           "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
         },
         {
+          "name": "Bridged USDT",
+          "ticker": "USDT",
+          "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+          "chainId": 8453,
+          "decimals": 6,
+          "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
+        },
+        {
           "name": "EURC",
           "ticker": "EURC",
           "chainId": 8453,
@@ -370,6 +378,14 @@
           "chainId": 10,
           "decimals": 6,
           "logoURI": "https://assets.coingecko.com/coins/images/6319/standard/USDC.png"
+        },
+        {
+          "name": "Bridged USDT",
+          "ticker": "USDT",
+          "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+          "chainId": 10,
+          "decimals": 6,
+          "logoURI": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
         },
         {
           "name": "Optimism",
